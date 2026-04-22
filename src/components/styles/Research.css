@@ -62,21 +62,22 @@
 }
 
 .research-btn {
-  background: linear-gradient(90deg, var(--accentColor), var(--secondaryAccent));
+  background-color: transparent;
   color: #fff;
   padding: 15px 30px;
   border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  transition: box-shadow 0.3s;
+  transition: 0.3s;
   display: inline-block;
 }
 
 .research-btn:hover {
-  box-shadow: 0 0 20px rgba(134, 239, 172, 0.6);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
 }
 
 @media only screen and (max-width: 900px) {

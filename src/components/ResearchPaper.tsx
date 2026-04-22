@@ -6,7 +6,7 @@ const ResearchPaper = () => {
     <div
       className="career-section section-container"
       id="research"
-      style={{ position: "relative", backgroundColor: "#020617", zIndex: 11, paddingBottom: "20px", marginBottom: "0px" }}
+      style={{ position: "relative", backgroundColor: "#020617", zIndex: 11, paddingBottom: "150px", marginBottom: "0px" }}
     >
       <div className="career-container">
         <h2>
