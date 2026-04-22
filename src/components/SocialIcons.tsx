@@ -7,6 +7,8 @@ import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 
+const base = import.meta.env.BASE_URL;
+
 const SocialIcons = () => {
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
@@ -74,7 +76,7 @@ const SocialIcons = () => {
 
       <a
         className="resume-button"
-        href="src/Resume/Piyush_Navangul_Resume_ATS_FullPage.pdf"
+        href={`${base}Resume/Piyush_Navangul_Resume_ATS_FullPage.pdf`}
         target="_blank"
       >
         <HoverLinks text="RESUME" />

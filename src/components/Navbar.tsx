@@ -6,6 +6,8 @@ import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const base = import.meta.env.BASE_URL;
+
 const Navbar = () => {
   useEffect(() => {
     let links = document.querySelectorAll(".header ul a");
@@ -27,7 +29,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          <img src="/images/Logo.jpeg" alt="Logo" style={{ height: "40px", borderRadius: "50%" }} />
+          <img src={`${base}images/Logo.jpeg`} alt="Logo" style={{ height: "40px", borderRadius: "50%" }} />
         </a>
 
         <ul>
