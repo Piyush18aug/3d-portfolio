@@ -9,11 +9,84 @@
   text-transform: uppercase;
   margin: 0;
 }
-.contact-flex {
+.contact-layout {
   display: flex;
+  gap: 60px;
   justify-content: space-between;
 }
-.contact-flex h4 {
+.contact-form-wrapper {
+  flex: 1;
+}
+.contact-info-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: rgba(94, 234, 212, 0.03);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.form-input:focus {
+  border-color: var(--accentColor);
+  background-color: rgba(94, 234, 212, 0.08);
+  box-shadow: 0 0 15px rgba(94, 234, 212, 0.2);
+}
+.form-textarea {
+  resize: vertical;
+}
+.form-submit-btn {
+  background: transparent;
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.form-submit-btn:hover {
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+  box-shadow: 0 0 20px rgba(94, 234, 212, 0.4);
+}
+.form-msg {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.form-msg.success {
+  color: #4ade80;
+}
+.form-msg.error {
+  color: #f87171;
+}
+.contact-social-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contact-info-wrapper h4 {
   font-weight: 500;
   margin: 0;
   opacity: 0.6;
@@ -22,7 +95,7 @@
   display: flex;
   flex-direction: column;
 }
-.contact-flex p {
+.contact-info-wrapper p {
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -67,19 +140,19 @@ a.contact-social {
   a.contact-social {
     font-size: 20px;
   }
-  .contact-flex p {
+  .contact-info-wrapper p {
     margin-top: 0px;
   }
 }
 @media only screen and (max-width: 900px) {
-  .contact-flex {
+  .contact-layout {
     flex-direction: column;
     gap: 40px;
   }
-  .contact-flex p {
+  .contact-info-wrapper p {
     margin-bottom: 0px;
   }
-  .contact-flex h4 {
+  .contact-info-wrapper h4 {
     margin-top: 20px;
   }
   .contact-section {

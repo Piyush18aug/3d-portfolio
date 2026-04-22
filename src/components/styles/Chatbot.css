@@ -1,0 +1,69 @@
+.chatbot-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--accentColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accentColor);
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--accentColor);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chatbot-icon-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--accentColor);
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+}
+
+/* Subtle pulse animation to draw attention */
+.chatbot-icon-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--accentColor);
+  animation: pulse 2s infinite;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chatbot-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  .chatbot-container {
+    bottom: 20px;
+    right: 20px;
+  }
+}
