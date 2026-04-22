@@ -1,0 +1,43 @@
+.techstack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 250px;
+}
+
+.tech-tag {
+  background: rgba(125, 211, 252, 0.05);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-tag:hover {
+  background: rgba(134, 239, 172, 0.2);
+  border-color: var(--secondaryAccent);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(134, 239, 172, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+  .techstack-grid {
+    margin-top: 100px;
+    padding: 20px;
+  }
+  .tech-tag {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
