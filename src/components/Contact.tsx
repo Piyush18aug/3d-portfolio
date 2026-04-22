@@ -54,7 +54,7 @@ const Contact = () => {
               <h4>Social</h4>
               <div className="contact-social-links">
                 <a
-                  href="https://github.com/Piyush-Navangul"
+                  href="https://github.com/Piyush18aug"
                   target="_blank"
                   data-cursor="disable"
                   className="contact-social"
@@ -62,7 +62,7 @@ const Contact = () => {
                   Github <MdArrowOutward />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/piyush-navangul"
+                  href="https://www.linkedin.com/in/piyush-navangul-4aba1127b/"
                   target="_blank"
                   data-cursor="disable"
                   className="contact-social"

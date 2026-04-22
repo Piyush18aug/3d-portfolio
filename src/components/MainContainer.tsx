@@ -33,6 +33,23 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     };
   }, [isDesktopView]);
 
+  useEffect(() => {
+    // Initialize audio objects
+    const clickAudio = new Audio("/Sound/click.mp3");
+
+    // Handle Click
+    const handleClick = () => {
+      clickAudio.currentTime = 0; // Allow overlapping fast clicks
+      clickAudio.play().catch(() => {});
+    };
+
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return (
     <div className="container-main">
       <Cursor />

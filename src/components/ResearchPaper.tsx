@@ -1,6 +1,6 @@
 import "./styles/Career.css";
 import "./styles/Research.css";
-import researchPdf from "../Research Paper/Behavioral-Finance-Analysis-Using-AI-on-Player-Spending-Patterns-in-GTA-V.pdf";
+import researchPdf from "../Research Paper/GTA5_BehavioralFinance_AI_Paper.pdf";
 
 const ResearchPaper = () => {
   return (
