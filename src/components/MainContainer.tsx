@@ -12,7 +12,6 @@ import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
-import Chatbot from "./Chatbot";
 import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -39,7 +38,6 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Cursor />
       <Navbar />
       <SocialIcons />
-      <Chatbot />
       {isDesktopView && children}
       <div className="container-main">
         <Landing>{!isDesktopView && children}</Landing>

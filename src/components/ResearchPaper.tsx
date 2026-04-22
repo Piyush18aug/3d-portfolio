@@ -1,5 +1,6 @@
 import "./styles/Career.css";
 import "./styles/Research.css";
+import researchPdf from "../Research Paper/Behavioral-Finance-Analysis-Using-AI-on-Player-Spending-Patterns-in-GTA-V.pdf";
 
 const ResearchPaper = () => {
   return (
@@ -51,7 +52,7 @@ Overall, the research highlights how AI + behavioral finance + gaming can help u
 
           <div className="research-btn-container">
             {/* The actual research paper pdf link can be placed here */}
-            <a href="src/Resume/GTA5_BehavioralFinance_AI_Paper.pdf" target="_blank" rel="noopener noreferrer" className="research-btn">
+            <a href={researchPdf} target="_blank" rel="noopener noreferrer" className="research-btn">
               View Research Paper (PDF)
             </a>
           </div>

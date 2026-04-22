@@ -48,16 +48,18 @@
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
-    justify-content: right;
+    justify-content: flex-end;
     max-width: 1920px;
     height: auto;
     min-height: calc(var(--vh) / 2);
     padding: 100px 0px;
     opacity: 1;
+    z-index: 20;
   }
   .about-me {
     padding: 0px;
-    width: 50%;
+    width: 38%;
+    margin-right: 2%;
   }
   .about-me p {
     font-size: 1.9vw;
