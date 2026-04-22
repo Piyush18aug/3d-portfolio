@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 
 export default function handleResize(
@@ -21,6 +22,8 @@ export default function handleResize(
       trigger.kill();
     }
   });
+  // Reset transform state so GSAP re-owns it cleanly after ScrollTrigger kill
+  gsap.set(".character-model", { xPercent: -50, yPercent: 0 });
   setCharTimeline(character, camera);
   setAllTimeline();
 }

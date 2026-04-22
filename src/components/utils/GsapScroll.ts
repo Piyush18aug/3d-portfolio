@@ -63,6 +63,10 @@ export function setCharTimeline(
   let neckBone = character?.getObjectByName("spine005");
   if (window.innerWidth > 1024) {
     if (character) {
+      // Set initial state immediately so GSAP owns the transform (not CSS)
+      // This prevents cross-browser inconsistencies between CSS & GSAP transforms
+      gsap.set(".character-model", { xPercent: -50 });
+
       tl1
         .fromTo(character.rotation, { y: 0 }, { y: 0.7, duration: 1 }, 0)
         .to(camera.position, { z: 22 }, 0)
@@ -111,8 +115,8 @@ export function setCharTimeline(
       tl3
         .fromTo(
           ".character-model",
-          { y: "0%" },
-          { y: "-100%", duration: 4, ease: "none", delay: 1 },
+          { yPercent: 0 },
+          { yPercent: -100, duration: 4, ease: "none", delay: 1 },
           0
         )
         .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
@@ -120,6 +124,8 @@ export function setCharTimeline(
     }
   } else {
     if (character) {
+      // On mobile, ensure the character starts centered
+      gsap.set(".character-model", { xPercent: -50 });
       const tM2 = gsap.timeline({
         scrollTrigger: {
           trigger: ".what-box-in",
