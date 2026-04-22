@@ -14,7 +14,7 @@ const projects = [
     description: "Employee Management: Add, update, and manage employee records; Attendance Management: Face recognition-based attendance system, Manual attendance entry system; Salary Management: Calculate salaries based on attendance, allowances, and deductions; Payroll Processing: Automate monthly salary generation.",
     image: "/images/payrollpro.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Ayan-Hasan-07/PayrollPro",
   },
   {
     title: "Video Steganography",
@@ -23,7 +23,7 @@ const projects = [
     description: "Data Embedding: Hide confidential data inside video frames; Data Extraction: Retrieve hidden data from video files; Video Processing: Handle frame-by-frame processing using OpenCV; Encoding & Decoding: Ensure secure data transmission; User Interface: Upload video and input/output hidden data.",
     image: "/images/VideoStegnography.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Video-Steganography",
   },
   {
     title: "SpendWise",
@@ -32,7 +32,7 @@ const projects = [
     description: "User Authentication: Secure login and registration; Expense Management: Add, update, and delete expense records; Category Management: Organize expenses into categories; Data Visualization: Display spending patterns using charts; Awareness & Goals: Provide financial awareness and allow user goals.",
     image: "/images/Spendwise.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/SpendWise",
   },
   {
     title: "Reel Generator",
@@ -41,7 +41,7 @@ const projects = [
     description: "YouTube Input: Accept YouTube video link as input; Video Processing: Extract and process video content; Highlight Detection: Identify key/best moments from the video; Clip Generation: Automatically generate a short 30-second reel; Optimization: Reduce manual editing effort and improve efficiency.",
     image: "/images/Reel.jpeg",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Reel_Generator",
   },
   {
     title: "Startup Funding Analysis",
@@ -50,7 +50,7 @@ const projects = [
     description: "Data Collection: Gather startup funding dataset; Data Cleaning: Preprocess and handle missing/inconsistent data; Data Analysis: Analyze funding trends, investors, and startup growth; Visualization: Create charts and graphs for better insights; Insights Generation: Identify patterns in funding and investment behavior.",
     image: "/images/startupfundinganalysis.png",
     linkText: "Link",
-    link: "#",
+    link: "https://piyush-startup-funding-analysis.streamlit.app/",
   },
   {
     title: "ERP System",
@@ -59,7 +59,7 @@ const projects = [
     description: "User Management: Manage roles for admin, faculty, and students; Student Management: Add, update, and track student records; Attendance Management: Record and monitor student attendance; Academic Management: Manage subjects, courses, and results; Notice & Communication: Share announcements and updates.",
     image: "/images/ERP.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/ERP_System",
   },
   {
     title: "Pharma Management",
@@ -68,7 +68,7 @@ const projects = [
     description: "User Management: Manage roles for admin and staff; Medicine Management: Add, update, and track medicine details; Inventory Management: Monitor stock levels and expiry dates; Expiry Alert System: Generate alerts for medicines nearing expiry; Sales Management: Handle billing and medicine sales.",
     image: "/images/pharma.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Pharma_Management_System",
   },
   {
     title: "Computer Lab Management",
@@ -77,7 +77,7 @@ const projects = [
     description: "Issue Reporting: Students can raise issues related to hardware or software; Ticket Management: Generate and track issue tickets; IT Support Module: IT department reviews and resolves reported issues; Admin Panel: Admin monitors and manages all tickets and activities; Status Tracking: Real-time issue status.",
     image: "/images/lab.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Computer_Lab_Management_System",
   },
   {
     title: "Interview Tracker",
@@ -86,7 +86,7 @@ const projects = [
     description: "User Management: Manage user profiles and authentication; Application Tracking: Track job applications and interview status; Interview Scheduling: Manage interview dates and reminders; Mock Interview Module: Allow freshers to practice interviews; Feedback System: Provide performance feedback.",
     image: "/images/interview.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Interview-Tracker",
   },
   {
     title: "Annual Report System",
@@ -95,7 +95,7 @@ const projects = [
     description: "Data Collection: Collect report data through structured forms; Content Management: Manage different sections of the annual report; Report Generation: Automatically generate complete reports; File Export: Download reports in document format (PDF/Doc); User Management: Allow multiple users to input.",
     image: "/images/annualreport.png",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/Annual_report_Generation",
   },
   {
     title: "BooksGuide",
@@ -104,7 +104,7 @@ const projects = [
     description: "User Interface: Provide a platform to access notes and books; Content Management: Manage study materials for courses (BCA, BBA, BSc, etc.); User Management: Manage user accounts and access; Database Management: Store and manage content and user data efficiently.",
     image: "/images/booksguide.jpeg",
     linkText: "GitHub Repo",
-    link: "#",
+    link: "https://github.com/Piyush18aug/booksguide",
   },
   {
     title: "MarketMentor",
@@ -113,7 +113,7 @@ const projects = [
     description: "API Integration: Fetch real-time stock market data using external APIs; Data Processing: Handle and structure stock price data; Candlestick Visualization: Display stock trends using candlestick charts; User Interface: Provide interactive dashboard; Data Analysis: Help users understand market trends.",
     image: "/images/marketmentor.png",
     linkText: "Link",
-    link: "#",
+    link: "https://sth-marketmentors.vercel.app/",
   },
 ];
 
