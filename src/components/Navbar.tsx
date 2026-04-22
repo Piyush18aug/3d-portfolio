@@ -27,7 +27,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          PIYUSH
+          <img src="/images/Logo.jpeg" alt="Logo" style={{ height: "40px", borderRadius: "50%" }} />
         </a>
         <a
           href="mailto:piyushnavangul12@gmail.com"

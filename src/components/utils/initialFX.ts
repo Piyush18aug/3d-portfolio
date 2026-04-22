@@ -82,56 +82,53 @@ export async function initialFX() {
 }
 
 function LoopText(Text1: SplitText, Text2: SplitText) {
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  const delay = 4;
-  const delay2 = delay * 2 + 1;
+  var tl = gsap.timeline({ repeat: -1 });
 
-  tl.fromTo(
-    Text2.chars,
-    { opacity: 0, y: 80 },
-    {
-      opacity: 1,
-      duration: 1.2,
-      ease: "power3.inOut",
-      y: 0,
-      stagger: 0.1,
-      delay: delay,
-    },
-    0
-  )
-    .fromTo(
-      Text1.chars,
-      { y: 80 },
-      {
-        duration: 1.2,
-        ease: "power3.inOut",
-        y: 0,
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    )
-    .fromTo(
-      Text1.chars,
-      { y: 0 },
-      {
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay,
-      },
-      0
-    )
-    .to(
-      Text2.chars,
-      {
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    );
+  // Initial states
+  gsap.set(Text1.chars, { opacity: 1, y: 0 });
+  gsap.set(Text2.chars, { opacity: 0, y: 80 });
+
+  // 1. Pause for 4 seconds
+  tl.to({}, { duration: 4 })
+  
+  // 2. Transition 1: Text 1 moves up/out, Text 2 moves up/in
+  .to(Text1.chars, {
+    y: -80,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.inOut",
+    stagger: 0.05
+  })
+  .to(Text2.chars, {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: "power3.inOut",
+    stagger: 0.05
+  }, "<")
+  
+  // Immediately reset Text1 to the bottom behind the scenes
+  .set(Text1.chars, { y: 80 })
+
+  // 3. Pause for 4 seconds
+  .to({}, { duration: 4 })
+  
+  // 4. Transition 2: Text 2 moves up/out, Text 1 moves up/in
+  .to(Text2.chars, {
+    y: -80,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.inOut",
+    stagger: 0.05
+  })
+  .to(Text1.chars, {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: "power3.inOut",
+    stagger: 0.05
+  }, "<")
+  
+  // Immediately reset Text2 to the bottom behind the scenes for the next loop
+  .set(Text2.chars, { y: 80 });
 }
