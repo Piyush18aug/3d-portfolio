@@ -35,7 +35,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     // Initialize audio objects
-    const clickAudio = new Audio("/Sound/click.mp3");
+    const clickAudio = new Audio(`${import.meta.env.BASE_URL}Sound/click.mp3`);
 
     // Handle Click
     const handleClick = () => {

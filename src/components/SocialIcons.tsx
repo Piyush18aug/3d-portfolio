@@ -63,19 +63,25 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/piyush-navangul-4aba1127b/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/piyush-navangul-4aba1127b/"
+            target="_blank"
+          >
             <FaLinkedinIn />
           </a>
         </span>
       </div>
-      
-      <a className="resume-button" href="src/Resume/Piyush_Navangul_Resume_ATS_FullPage.pdf" target="_blank">
+
+      <a
+        className="resume-button"
+        href="src/Resume/Piyush_Navangul_Resume_ATS_FullPage.pdf"
+        target="_blank"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
         </span>
       </a>
-
     </div>
   );
 };
