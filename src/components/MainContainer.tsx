@@ -4,7 +4,6 @@ import Career from "./Career";
 import Education from "./Education";
 import Certifications from "./Certifications";
 import ResearchPaper from "./ResearchPaper";
-import Achievements from "./Achievements";
 import StrengthsAndHobbies from "./StrengthsAndHobbies";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
@@ -49,7 +48,6 @@ const MainContainer = ({ children }: PropsWithChildren) => {
         <Work />
         <Certifications />
         <ResearchPaper />
-        <Achievements />
         <StrengthsAndHobbies />
         {isDesktopView && (
           <Suspense fallback={<div>Loading....</div>}>

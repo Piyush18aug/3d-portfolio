@@ -29,17 +29,21 @@ const Navbar = () => {
         <a href="/#" className="navbar-title" data-cursor="disable">
           <img src="/images/Logo.jpeg" alt="Logo" style={{ height: "40px", borderRadius: "50%" }} />
         </a>
-        <a
-          href="mailto:piyushnavangul12@gmail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          piyushnavangul12@gmail.com
-        </a>
+
         <ul>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#whatido" href="#whatido">
+              <HoverLinks text="WHAT I DO" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#career" href="#career">
+              <HoverLinks text="CAREER" />
             </a>
           </li>
           <li>
@@ -53,8 +57,19 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a data-href="#achievements" href="#achievements">
-              <HoverLinks text="ACHIEVEMENTS" />
+            <a data-href="#certifications" href="#certifications">
+              <HoverLinks text="CERTIFICATIONS" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#research" href="#research">
+              <HoverLinks text="RESEARCH" />
+            </a>
+          </li>
+
+          <li>
+            <a data-href="#strengths" href="#strengths">
+              <HoverLinks text="STRENGTHS" />
             </a>
           </li>
           <li>

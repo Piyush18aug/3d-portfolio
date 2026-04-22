@@ -13,13 +13,13 @@
   z-index: 9999;
 }
 .header ul {
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
-  column-gap: 40px;
+  column-gap: 8px;
   row-gap: 8px;
   align-items: end;
 }
@@ -52,7 +52,9 @@
   .header ul {
     flex-direction: row;
     align-items: center;
-    font-size: 14px;
+    font-size: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
   .header ul li {
     color: #eae5ec;
@@ -71,8 +73,9 @@
     padding: 35px 0px;
   }
   .header ul {
-    column-gap: 80px;
-    font-size: 16px;
+    column-gap: 20px;
+    font-size: 12px;
+    flex-wrap: nowrap;
   }
   .navbar-connect {
     font-size: 16px;
