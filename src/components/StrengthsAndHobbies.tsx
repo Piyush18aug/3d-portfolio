@@ -16,7 +16,7 @@ const StrengthsAndHobbies = () => {
     <div 
       className="whatIDO" 
       id="strengths"
-      style={{ position: "relative", backgroundColor: "#020617", zIndex: 13 }}
+      style={{ position: "relative", backgroundColor: "var(--backgroundColor)", zIndex: 13 }}
     >
       <div className="what-box">
         <h2 className="title glow-title">

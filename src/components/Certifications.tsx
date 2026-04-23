@@ -16,7 +16,7 @@ const Certifications = () => {
     <div 
       className="career-section section-container" 
       id="certifications" 
-      style={{ position: "relative", backgroundColor: "#020617", zIndex: 11 }}
+      style={{ position: "relative", backgroundColor: "var(--backgroundColor)", zIndex: 11 }}
     >
       <div className="career-container">
         <h2 className="glow-title">

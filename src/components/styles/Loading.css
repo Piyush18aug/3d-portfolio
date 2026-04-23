@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: var(--vh);
-  /* background-image: linear-gradient(#cbb1ff, #d8c4ff); */
+  background-image: linear-gradient(#cbb1ff, #d8c4ff);
   background-color: #eae5ec;
   z-index: 999999999;
   display: flex;

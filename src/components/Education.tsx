@@ -5,7 +5,7 @@ const Education = () => {
     <div 
       className="career-section section-container" 
       id="education"
-      style={{ position: "relative", backgroundColor: "#020617", zIndex: 9 }}
+      style={{ position: "relative", backgroundColor: "var(--backgroundColor)", zIndex: 9 }}
     >
       <div className="career-container">
         <h2 className="glow-title">

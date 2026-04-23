@@ -5,7 +5,7 @@ const Achievements = () => {
     <div 
       className="about-section section-container" 
       id="achievements"
-      style={{ position: "relative", backgroundColor: "#020617", zIndex: 12, paddingTop: "0px", marginTop: "0px" }}
+      style={{ position: "relative", backgroundColor: "var(--backgroundColor)", zIndex: 12, paddingTop: "0px", marginTop: "0px" }}
     >
       <div className="about-me">
         <h3 className="title glow-title">Achievements</h3>
