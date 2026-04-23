@@ -8,7 +8,7 @@ const Education = () => {
       style={{ position: "relative", backgroundColor: "#020617", zIndex: 9 }}
     >
       <div className="career-container">
-        <h2>
+        <h2 className="glow-title">
           My <span>Education</span>
         </h2>
         <div className="career-info">

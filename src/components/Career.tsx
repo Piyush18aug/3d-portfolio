@@ -4,7 +4,7 @@ const Career = () => {
   return (
     <div className="career-section section-container" id="career">
       <div className="career-container">
-        <h2>
+        <h2 className="glow-title">
           My career <span>&</span>
           <br /> experience
         </h2>

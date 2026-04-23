@@ -10,7 +10,7 @@ const base = import.meta.env.BASE_URL;
 
 const Navbar = () => {
   useEffect(() => {
-    let links = document.querySelectorAll(".header ul a");
+    let links = document.querySelectorAll(".header a");
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a href="#landingDiv" className="navbar-title" data-cursor="disable">
           <img src={`${base}images/Logo.jpeg`} alt="Logo" style={{ height: "40px", borderRadius: "50%" }} />
         </a>
 

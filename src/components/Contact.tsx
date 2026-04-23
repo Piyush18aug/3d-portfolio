@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
-        <h3 style={{ marginBottom: "40px" }}>Let's Connect</h3>
+        <h3 className="glow-title" style={{ marginBottom: "40px" }}>Let's Connect</h3>
         
         <div className="contact-layout">
           <div className="contact-form-wrapper">

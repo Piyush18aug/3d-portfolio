@@ -19,7 +19,7 @@ const StrengthsAndHobbies = () => {
       style={{ position: "relative", backgroundColor: "#020617", zIndex: 13 }}
     >
       <div className="what-box">
-        <h2 className="title">
+        <h2 className="title glow-title">
           S<span className="hat-h2">TRENGTHS</span>
           <div>
             &<span className="do-h2"> HOBBIES</span>

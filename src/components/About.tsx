@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="about-section" id="about">
       <div className="about-me">
-        <h3 className="title">About Me</h3>
+        <h3 className="title glow-title">About Me</h3>
         <p className="para">
           Aspiring software developer with strong technical and analytical skills, 
           seeking an entry-level opportunity to build scalable applications and deliver 

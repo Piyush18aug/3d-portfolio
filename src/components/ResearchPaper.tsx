@@ -10,7 +10,7 @@ const ResearchPaper = () => {
       style={{ position: "relative", backgroundColor: "#020617", zIndex: 11, paddingBottom: "150px", marginBottom: "0px" }}
     >
       <div className="career-container">
-        <h2>
+        <h2 className="glow-title">
           Research <span>Publications</span>
         </h2>
         

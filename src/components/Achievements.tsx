@@ -8,7 +8,7 @@ const Achievements = () => {
       style={{ position: "relative", backgroundColor: "#020617", zIndex: 12, paddingTop: "0px", marginTop: "0px" }}
     >
       <div className="about-me">
-        <h3 className="title">Achievements</h3>
+        <h3 className="title glow-title">Achievements</h3>
         
         <div>
           <h4 style={{ color: "#fff", marginBottom: "10px" }}>Co-curricular Activities</h4>

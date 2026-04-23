@@ -155,3 +155,18 @@ body {
     font-size: 40px;
   }
 }
+
+.glow-title {
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(94, 234, 212, 0.4), 0 0 20px rgba(94, 234, 212, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(94, 234, 212, 0.6),
+      0 0 25px rgba(94, 234, 212, 0.3), 0 0 35px rgba(94, 234, 212, 0.1);
+  }
+}
