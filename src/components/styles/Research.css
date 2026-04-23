@@ -1,3 +1,4 @@
+/* ─── Research Card ────────────────────────────────────── */
 .research-paper-card {
   width: 100%;
   max-width: 900px;
@@ -13,6 +14,7 @@
   z-index: 2;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
+  box-sizing: border-box;
 }
 .research-paper-card:hover {
   border-color: var(--secondaryAccent);
@@ -20,15 +22,15 @@
 }
 
 .research-title {
-  font-size: 32px;
+  font-size: clamp(1.125rem, 2.5vw, 2rem); /* 18px–32px */
   font-weight: 500;
   color: #fff;
   margin: 0;
-  line-height: 40px;
+  line-height: 1.35;
 }
 
 .research-subtitle {
-  font-size: 18px;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   color: var(--accentColor);
   margin: 0;
   text-transform: uppercase;
@@ -42,37 +44,41 @@
 }
 
 .research-box h4 {
-  font-size: 22px;
+  font-size: clamp(1rem, 1.8vw, 1.375rem);
   font-weight: 500;
   color: #fff;
   margin: 0;
 }
 
 .research-box p {
-  font-size: 16px;
+  font-size: clamp(0.875rem, 1.3vw, 1rem);
   color: #bbb;
-  line-height: 28px;
+  line-height: 1.75;
   margin: 0;
   font-weight: 300;
 }
 
 .research-btn-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 10px;
 }
 
 .research-btn {
   background-color: transparent;
   color: #fff;
-  padding: 15px 30px;
+  padding: 14px 28px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  font-size: 16px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   font-weight: 500;
   letter-spacing: 1px;
   transition: 0.3s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .research-btn:hover {
@@ -80,12 +86,25 @@
   border-color: #fff;
 }
 
-@media only screen and (max-width: 900px) {
+/* ─── Mobile: ≤480px ───────────────────────────────────── */
+@media only screen and (max-width: 480px) {
   .research-paper-card {
-    padding: 30px;
+    padding: 20px 16px;
+    border-radius: 14px;
+    gap: 20px;
   }
-  .research-title {
-    font-size: 26px;
-    line-height: 32px;
+
+  .research-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ─── Tablet: 481px – 900px ─────────────────────────────── */
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  .research-paper-card {
+    padding: 30px 24px;
+    gap: 24px;
   }
 }

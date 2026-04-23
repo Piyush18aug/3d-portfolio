@@ -133,51 +133,59 @@ const projects = [
 
 const Work = () => {
   useGSAP(() => {
-    const workFlex = document.querySelector(".work-flex") as HTMLElement;
-    const workSection = document.querySelector(".work-section") as HTMLElement;
+    let mm = gsap.matchMedia();
 
-    if (!workFlex || !workSection) return;
+    mm.add("(min-width: 1025px)", () => {
+      const workFlex = document.querySelector(".work-flex") as HTMLElement;
+      const workSection = document.querySelector(".work-section") as HTMLElement;
 
-    // Calculate exact distance to scroll so the last project is fully visible
-    const getScrollAmount = () => {
-      const boxes = document.getElementsByClassName("work-box");
-      if (boxes.length === 0) return 0;
+      if (!workFlex || !workSection) return;
 
-      const lastBox = boxes[boxes.length - 1] as HTMLElement;
-      // Get the right edge coordinate of the last box
-      const lastBoxRight = lastBox.getBoundingClientRect().right;
+      // Calculate exact distance to scroll so the last project is fully visible
+      const getScrollAmount = () => {
+        const boxes = document.getElementsByClassName("work-box");
+        if (boxes.length === 0) return 0;
 
-      // Calculate how far that right edge is past the viewport's right edge
-      // Add roughly 50px of breathing room padding at the end
-      let distance = lastBoxRight - window.innerWidth + 50;
+        const lastBox = boxes[boxes.length - 1] as HTMLElement;
+        // Get the right edge coordinate of the last box
+        const lastBoxRight = lastBox.getBoundingClientRect().right;
 
-      return distance > 0 ? distance : 0;
-    };
+        // Calculate how far that right edge is past the viewport's right edge
+        // Add roughly 50px of breathing room padding at the end
+        let distance = lastBoxRight - window.innerWidth + 50;
 
-    // Use a direct tween to avoid timeline lag where the pin ends before the scrub finishes
-    const tween = gsap.to(workFlex, {
-      x: () => -getScrollAmount(),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: () => `+=${getScrollAmount()}`,
-        pin: true,
-        scrub: true, // true binds it instantly without a 1 second delay
-        pinSpacing: true,
-        invalidateOnRefresh: true,
-        id: "work",
-      },
+        return distance > 0 ? distance : 0;
+      };
+
+      // Use a direct tween to avoid timeline lag where the pin ends before the scrub finishes
+      const tween = gsap.to(workFlex, {
+        x: () => -getScrollAmount(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: () => `+=${getScrollAmount()}`,
+          pin: true,
+          scrub: true, // true binds it instantly without a 1 second delay
+          pinSpacing: true,
+          invalidateOnRefresh: true,
+          id: "work",
+        },
+      });
+
+      // Force GSAP to recalculate positions safely after mount
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+
+      return () => {
+        tween.kill();
+        ScrollTrigger.getById("work")?.kill();
+      };
     });
 
-    // Force GSAP to recalculate positions safely after mount
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
-
     return () => {
-      tween.kill();
-      ScrollTrigger.getById("work")?.kill();
+      mm.revert();
     };
   }, []);
 

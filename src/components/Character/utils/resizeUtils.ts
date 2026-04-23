@@ -23,7 +23,7 @@ export default function handleResize(
     }
   });
   // Reset transform state so GSAP re-owns it cleanly after ScrollTrigger kill
-  gsap.set(".character-model", { xPercent: -50, yPercent: 0 });
+  gsap.set(".character-model", { xPercent: 0, yPercent: 0 });
   setCharTimeline(character, camera);
   setAllTimeline();
 }

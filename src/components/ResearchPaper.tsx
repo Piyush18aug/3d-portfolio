@@ -31,24 +31,6 @@ Overall, the research highlights how virtual game environments can reflect real-
             </p>
           </div>
 
-          <div className="research-box">
-            <h4>Summary</h4>
-            <p>
-Modern video games, especially open-world games like GTA V, are no longer just for entertainment—they act as environments to study human behavior and financial decision-making. In GTA Online, players engage in activities like buying, selling, investing, and managing resources, similar to real-world economic systems.
-
-Behavioral finance explains that people don’t always make rational financial decisions; instead, their choices are influenced by emotions, biases, and social factors (as shown by Kahneman and Tversky). These concepts can be observed in gaming environments, where AI can analyze large datasets to understand player behavior.
-
-With over 185 million copies sold, GTA V provides a large-scale platform where players use real money to purchase virtual assets, making it ideal for studying risk management, spending habits, and investment behavior.
-
-Although previous research has explored gaming behavior, there is a gap in using advanced AI models (like LSTM) to analyze in-game financial decisions. This study aims to fill that gap by developing an AI-based system to:
-
-Identify player behaviors (risk-taking, impulsive spending, investment decisions)
-Compare in-game behavior with real-world financial theories
-Analyze the impact of virtual environments on real-life decision-making
-
-Overall, the research highlights how AI + behavioral finance + gaming can help us better understand human financial behavior and improve game design, policies, and player welfare.
-            </p>
-          </div>
 
           <div className="research-btn-container">
             {/* The actual research paper pdf link can be placed here */}

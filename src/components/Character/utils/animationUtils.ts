@@ -14,23 +14,26 @@ const setAnimations = (gltf: GLTF) => {
     introAction.clampWhenFinished = true;
     introAction.play();
     const clipNames = ["key1", "key2", "key5", "key6"];
+    const keyActions: THREE.AnimationAction[] = [];
     clipNames.forEach((name) => {
       const clip = THREE.AnimationClip.findByName(gltf.animations, name);
       if (clip) {
         const action = mixer?.clipAction(clip);
-        action!.play();
-        action!.timeScale = 1.2;
+        if (action) {
+          action.timeScale = 1.2;
+          keyActions.push(action);
+        }
       } else {
         console.error(`Animation "${name}" not found`);
       }
     });
+
     let typingAction: THREE.AnimationAction | null = null;
     typingAction = createBoneAction(gltf, mixer, "typing", typingBoneNames);
     if (typingAction) {
-      typingAction.enabled = true;
-      typingAction.play();
       typingAction.timeScale = 1.2;
     }
+
   }
   function startIntro() {
     const introClip = gltf.animations.find(
@@ -41,7 +44,17 @@ const setAnimations = (gltf: GLTF) => {
     introAction.reset().play();
     setTimeout(() => {
       const blink = gltf.animations.find((clip) => clip.name === "Blink");
-      mixer.clipAction(blink!).play().fadeIn(0.5);
+      if (blink) mixer.clipAction(blink).play().fadeIn(0.5);
+
+      // Start typing animations after intro is done
+      if (typingAction) {
+        typingAction.enabled = true;
+        typingAction.reset().play().fadeIn(0.5);
+      }
+      
+      keyActions.forEach(action => {
+        action.reset().play();
+      });
     }, 2500);
   }
   function hover(gltf: GLTF, hoverDiv: HTMLDivElement) {

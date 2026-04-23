@@ -73,14 +73,16 @@ const Scene = () => {
 
     setWebglUnavailable(false);
     renderer.setSize(container.width, container.height);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    // Optimize performance on mobile by capping pixel ratio to 1
+    const dpr = window.innerWidth < 768 ? 1 : Math.min(window.devicePixelRatio, 2);
+    renderer.setPixelRatio(dpr);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     containerElement.appendChild(renderer.domElement);
 
     camera.position.z = 10;
     camera.position.set(0, 13.1, 24.7);
-    camera.zoom = 1.1;
+    camera.zoom = window.innerWidth > 1024 ? 0.85 : 1.1;
     camera.updateProjectionMatrix();
 
     const light = setLighting(scene);
